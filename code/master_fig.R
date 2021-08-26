@@ -1,0 +1,11 @@
+# produce all figures and table
+source("0_build_final_data_with_county.R")
+source("1_make_summary_table.R")
+source("2_make_histogram.R")
+source("3_make_map.R")
+source("4_make_scatterplot_deathrate.R")
+source("5_make_bar_excessnotcovid_county.R")
+source("6_make_bar_excess_regionmetro.R")
+source("7_make_time_series_plots.R")
+source("8_make_cum_pop_table.R")
+source("9_make_countyset_estimate_table.R")
