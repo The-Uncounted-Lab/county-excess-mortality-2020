@@ -9,7 +9,7 @@ covid_excess_ratio <- dat_xc %>%
     county = cs_name, cens_pop_est,
     covid_excess_death_ratio = (covid_deaths_2020 / excess_deaths_2020) * 100,
     covid_excess_death_ratio = ifelse(
-      excess_deaths_2020 < 0, 100, ifelse(
+      excess_deaths_2020 < 0, NA, ifelse(
         covid_excess_death_ratio > 100, 100, covid_excess_death_ratio
       )
     ),
@@ -23,7 +23,11 @@ covid_excess_ratio_cum <- covid_excess_ratio %>%
     pop = sum(cens_pop_est)
   ) %>%
   arrange(covid_excess_death_ratio_cat) %>%
-  mutate(cum_pop = cumsum(pop))
+  mutate(cum_pop = cumsum(pop),
+         sum_pop = sum(pop),
+         perc = round(cum_pop/sum_pop * 100, 2),
+         perc = paste0(perc, "%")) %>%
+  select(-sum_pop)
 
 kt <- kbl(covid_excess_ratio_cum, "latex",
   booktabs = T, linesep = "",
@@ -31,7 +35,8 @@ kt <- kbl(covid_excess_ratio_cum, "latex",
     "Percent of excess deaths \n assigned to COVID-19",
     "Number of county sets",
     "Population",
-    "Cumulative population"
+    "Cumulative population",
+    "Cumulative percent"
   ),
   format.args = list(big.mark = ","),
   row.names = TRUE
