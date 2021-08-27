@@ -227,7 +227,7 @@ fig3_map <- ggplot() +
   coord_equal() +
   theme_map() +
   labs(fill = "Percent of excess deaths \n not assigned to COVID-19") +
-  scale_fill_manual(values = c(rev(blue_palette), "gray80")) +
+  scale_fill_manual(values = c(rev(blue_palette), "gray70")) +
   theme(
     legend.position = c(0.25, -0.01),
     strip.background = element_blank(),

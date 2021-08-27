@@ -20,15 +20,15 @@ dat_xc <- left_join(
   by = c("state", "cs_name")
 )
 
-## exclude counties that are not in original final data
-# dat_xc_orig <- read_csv(paste0(datapath, "fitted_and_actual_deaths_county_2020_W2020_wash_6_3.csv"))
-# dat_xc_orig <- dat_xc_orig %>%
-#   transmute(county_code, keep = TRUE)
-# dat_xc <- left_join(
-#   dat_xc, dat_xc_orig,
-#   by = "county_code"
-# )
-# dat_xc <- dat_xc %>% filter(keep == TRUE)
+## exclude counties that do not have data available
+county_with_est <- read_csv("../raw_data/county_county_set_data_2020_wash_6_3.csv")
+county_with_est <- county_with_est %>%
+  transmute(county_code, keep = TRUE)
+dat_xc <- left_join(
+  dat_xc, county_with_est,
+  by = "county_code"
+)
+dat_xc <- dat_xc %>% filter(keep == TRUE)
 
 ## metropolitan status
 metro <- read_csv("../raw_data/FIPSmetroregion4cat.csv")
