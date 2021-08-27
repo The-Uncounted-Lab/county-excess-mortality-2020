@@ -176,8 +176,6 @@ mean_table <- bind_rows(mean_all, mean_metro, mean_region, mean_region_metro, me
     excess_death_rate = round(excess_death_rate, 1),
     prop_assigned = round(prop_assigned, 1),
     obs_exp_ratio = round(obs_exp_ratio, 2)
-    # row = row_number(),
-    # col1 = ifelse(row == 8 & col1 == "Great Lakes", "Great Lakes ", col1)
   ) %>%
   select(col1, metroname_mode, everything())
 mean_table <- as.data.frame(mean_table)

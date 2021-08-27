@@ -21,14 +21,14 @@ dat_xc <- left_join(
 )
 
 ## exclude counties that are not in original final data
-dat_xc_orig <- read_csv(paste0(datapath, "fitted_and_actual_deaths_county_2020_W2020_wash_6_3.csv"))
-dat_xc_orig <- dat_xc_orig %>%
-  transmute(county_code, keep = TRUE)
-dat_xc <- left_join(
-  dat_xc, dat_xc_orig,
-  by = "county_code"
-)
-dat_xc <- dat_xc %>% filter(keep == TRUE)
+# dat_xc_orig <- read_csv(paste0(datapath, "fitted_and_actual_deaths_county_2020_W2020_wash_6_3.csv"))
+# dat_xc_orig <- dat_xc_orig %>%
+#   transmute(county_code, keep = TRUE)
+# dat_xc <- left_join(
+#   dat_xc, dat_xc_orig,
+#   by = "county_code"
+# )
+# dat_xc <- dat_xc %>% filter(keep == TRUE)
 
 ## metropolitan status
 metro <- read_csv("../raw_data/FIPSmetroregion4cat.csv")
@@ -58,12 +58,13 @@ dat_xc <- left_join(
 dat_xc <- dat_xc %>%
   mutate(
     metroname = case_when(
-      county_code %in% c(2130, 2188, 2290, 4012, 30067) ~ "Nonmetro",
+      county_code %in% c(2068, 2105, 2198, 2230, 2275, 2282, 
+                         2013, 2016, 2164, 2270, 46113, 2130,
+                         2188, 2290, 4012, 30067) ~ "Nonmetro",
       county_code %in% c(8001, 8014) ~ "Lg fringe metro",
-      county_code %in% c(8013, 8123) ~ "Md/Sm metro",
+      county_code %in% c(8013, 8123, 51515) ~ "Md/Sm metro",
       TRUE ~ metroname
-    ),
-    year = 2020
+    )
   )
 
 saveRDS(dat_xc, file = "../final_data/fitted_and_actual_deaths_county_sets_2020_W2020_wash_6_3_countyrow.rds")
