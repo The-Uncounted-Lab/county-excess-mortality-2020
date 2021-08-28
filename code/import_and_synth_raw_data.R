@@ -10,7 +10,7 @@ library(stringr)
 #Directories
 
 #Set path to replication ket folder
-main_file_path <- "//serv571c/research2/Ackley_571c/covid_main_folder/county_set_update"
+main_file_path <- "..."
 
 rawdat <- paste0(main_file_path,'/raw_data')
 procdat <- paste0(main_file_path,'/processed_data')
