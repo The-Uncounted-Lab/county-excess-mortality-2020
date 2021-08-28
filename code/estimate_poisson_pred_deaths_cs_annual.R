@@ -7,8 +7,8 @@ library(data.table)
 library(stringr)
 library(sandwich)
 
-
-main_file_path <- "//serv571c/research2/Ackley_571c/covid_main_folder/county_set_update"
+#Set path to main folder
+main_file_path <- "..."
 
 ref_tables <- paste0(main_file_path,'/raw_data')
 libin <- paste0(main_file_path,'/processed_data')
