@@ -15,8 +15,6 @@ This repo includes data and code required to replicate the results in the paper 
 
 ## Code
 
-This program reads in CDC and census data to estimate the all cause mortality in 2020 based on all cause mortality from 2011-2019. Adding the official number of covid deaths to the historical based estimate of all cause mortality in 2020 gives an estimate of all cause mortality in 2020 that should estimate the actual all cause mortality for 2020. This program uses county sets where counties of less than 50,000 are combined to form a county-set which has a population of around 50,000 or greater.
-
 
 #### Import and Estimate Excess Mortality
 
