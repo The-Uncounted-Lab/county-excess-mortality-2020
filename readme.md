@@ -6,7 +6,7 @@ This repo includes data and code required to replicate the results in the paper 
 
 ![](https://raw.githubusercontent.com/pophealthdeterminantslab/county-level-estimates-of-excess-mortality/master/output/fig2_excess_death_map_bar.png)
 
-## Times Series Plots for Selected Counties
+## Time Series Plots for Selected Counties
 
 ![](https://raw.githubusercontent.com/pophealthdeterminantslab/county-level-estimates-of-excess-mortality/master/output/afig_ts_1.png)
 
