@@ -2,15 +2,9 @@
 
 This repo includes data and code required to replicate the results in the paper "County-Level Estimates of Excess Mortality Associated with COVID-19 in the United States".
 
-##Map of Excess Mortality By Quartile
+## Map of Excess Mortality By Quartile
 
 ![](https://raw.githubusercontent.com/pophealthdeterminantslab/county-level-estimates-of-excess-mortality/master/output/fig2_excess_death_map_bar.png)
-
-##Times Series Plots for Selected Counties
-
-![](https://raw.githubusercontent.com/pophealthdeterminantslab/county-level-estimates-of-excess-mortality/master/output/afig_time_series_stacked1.png)
-
-![](https://raw.githubusercontent.com/pophealthdeterminantslab/county-level-estimates-of-excess-mortality/master/output/afig_time_series_stacked2.png)
 
 
 
