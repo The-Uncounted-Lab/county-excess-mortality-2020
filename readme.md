@@ -6,6 +6,11 @@ This repo includes data and code required to replicate the results in the paper 
 
 ![](https://raw.githubusercontent.com/pophealthdeterminantslab/county-level-estimates-of-excess-mortality/master/output/fig2_excess_death_map_bar.png)
 
+## Times Series Plots for Selected Counties
+
+![](https://raw.githubusercontent.com/pophealthdeterminantslab/county-level-estimates-of-excess-mortality/master/output/afig_ts_1.png)
+
+![](https://raw.githubusercontent.com/pophealthdeterminantslab/county-level-estimates-of-excess-mortality/master/output/afig_ts_2.png)
 
 
 ## Code
@@ -45,4 +50,4 @@ This program reads in CDC and census data to estimate the all cause mortality in
   - [fitted_and_actual_deaths_county_sets_2020_W2020_wash_6_3.csv](https://github.com/pophealthdeterminantslab/county-level-estimates-of-excess-mortality/blob/master/final_data/fitted_and_actual_deaths_county_sets_2020_W2020_wash_6_3.csv) contains actual deaths and estimated expected deaths at county set level in 2020.
   - [fitted_and_actual_deaths_county_sets_2011_2020_W2020_wash_6_3.csv](https://github.com/pophealthdeterminantslab/county-level-estimates-of-excess-mortality/blob/master/final_data/fitted_and_actual_deaths_county_sets_2011_2020_W2020_wash_6_3.csv) contains actual deaths and estimated expected deaths at county set level between 2011 and 2020.
 - 2020 county-level provisional data file is exactly: https://data.cdc.gov/NCHS/AH-County-of-Residence-Provisional-COVID-19-Deaths/75vb-d79q. 
--Yearly mortality files are downloaded from from CDC Wonder. 
+- Yearly mortality files are downloaded from from CDC Wonder. 
