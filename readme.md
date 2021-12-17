@@ -2,7 +2,30 @@
 
 This repo includes data and code required to replicate the results in the paper "County-Level Estimates of Excess Mortality Associated with COVID-19 in the United States".
 
+##Map of Excess Mortality By Quartile
+
+![](https://raw.githubusercontent.com/pophealthdeterminantslab/county-level-estimates-of-excess-mortality/master/output/fig2_excess_death_map_bar.png)
+
+##Times Series Plots for Selected Counties
+
+![](https://raw.githubusercontent.com/pophealthdeterminantslab/county-level-estimates-of-excess-mortality/master/output/afig_time_series_stacked1.png)
+
+![](https://raw.githubusercontent.com/pophealthdeterminantslab/county-level-estimates-of-excess-mortality/master/output/afig_time_series_stacked2.png)
+
+
+
 ## Code
+
+This program reads in CDC and census data to estimate the all cause mortality in 2020 based on all cause mortality from 2011-2019. Adding the official number of covid deaths to the historical based estimate of all cause mortality in 2020 gives an estimate of all cause mortality in 2020 that should estimate the actual all cause mortality for 2020. This program uses county sets where counties of less than 50,000 are combined to form a county-set which has a population of around 50,000 or greater.
+
+
+#### Import and Estimate Excess Mortality
+
+- [code/import_and_synth_raw_data.R](https://github.com/pophealthdeterminantslab/county-level-estimates-of-excess-mortality/blob/master/code/import_and_synth_raw_data.R) load 2020 county-level provisional data
+(Note this file is exactly: https://data.cdc.gov/NCHS/AH-County-of-Residence-Provisional-COVID-19-Deaths/75vb-d79q). Load yearly mortality files downloaded from from CDC Wonder. 
+
+- [code/estimate_poisson_pred_deaths_cs_annual.R](https://github.com/pophealthdeterminantslab/county-level-estimates-of-excess-mortality/blob/master/code/estimate_poisson_pred_deaths_cs_annual.R) estimates the all cause mortality at baseline (2011-2019) and in 2020 on county set data. Import analysis data 'county_set_analysis_data_2011_2019_W2020_wash_6_3.csv' created in "import_and_synth_raw_data".
+
 
 #### Tables and Figures
 
@@ -27,3 +50,5 @@ This repo includes data and code required to replicate the results in the paper 
 - The folder `final_data/` includes final clean data used in the analysis.
   - [fitted_and_actual_deaths_county_sets_2020_W2020_wash_6_3.csv](https://github.com/pophealthdeterminantslab/county-level-estimates-of-excess-mortality/blob/master/final_data/fitted_and_actual_deaths_county_sets_2020_W2020_wash_6_3.csv) contains actual deaths and estimated expected deaths at county set level in 2020.
   - [fitted_and_actual_deaths_county_sets_2011_2020_W2020_wash_6_3.csv](https://github.com/pophealthdeterminantslab/county-level-estimates-of-excess-mortality/blob/master/final_data/fitted_and_actual_deaths_county_sets_2011_2020_W2020_wash_6_3.csv) contains actual deaths and estimated expected deaths at county set level between 2011 and 2020.
+- 2020 county-level provisional data file is exactly: https://data.cdc.gov/NCHS/AH-County-of-Residence-Provisional-COVID-19-Deaths/75vb-d79q. 
+-Yearly mortality files are downloaded from from CDC Wonder. 
