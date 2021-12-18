@@ -19,7 +19,7 @@ This repo includes data and code required to replicate the results in the paper 
 #### Import and Estimate Excess Mortality
 
 - [code/import_and_synth_raw_data.R](https://github.com/pophealthdeterminantslab/county-level-estimates-of-excess-mortality/blob/master/code/import_and_synth_raw_data.R) load 2020 county-level provisional data
-(Note this file is exactly: https://data.cdc.gov/NCHS/AH-County-of-Residence-Provisional-COVID-19-Deaths/75vb-d79q). Load yearly mortality files downloaded from from CDC Wonder. 
+(Note this file is exactly: https://data.cdc.gov/NCHS/AH-County-of-Residence-Provisional-COVID-19-Deaths/75vb-d79q). Load yearly mortality files downloaded from CDC Wonder. 
 
 - [code/estimate_poisson_pred_deaths_cs_annual.R](https://github.com/pophealthdeterminantslab/county-level-estimates-of-excess-mortality/blob/master/code/estimate_poisson_pred_deaths_cs_annual.R) estimates the all cause mortality at baseline (2011-2019) and in 2020 on county set data. Import analysis data 'county_set_analysis_data_2011_2019_W2020_wash_6_3.csv' created in "import_and_synth_raw_data".
 
@@ -48,4 +48,4 @@ This repo includes data and code required to replicate the results in the paper 
   - [fitted_and_actual_deaths_county_sets_2020_W2020_wash_6_3.csv](https://github.com/pophealthdeterminantslab/county-level-estimates-of-excess-mortality/blob/master/final_data/fitted_and_actual_deaths_county_sets_2020_W2020_wash_6_3.csv) contains actual deaths and estimated expected deaths at county set level in 2020.
   - [fitted_and_actual_deaths_county_sets_2011_2020_W2020_wash_6_3.csv](https://github.com/pophealthdeterminantslab/county-level-estimates-of-excess-mortality/blob/master/final_data/fitted_and_actual_deaths_county_sets_2011_2020_W2020_wash_6_3.csv) contains actual deaths and estimated expected deaths at county set level between 2011 and 2020.
 - 2020 county-level provisional data file is exactly: https://data.cdc.gov/NCHS/AH-County-of-Residence-Provisional-COVID-19-Deaths/75vb-d79q. 
-- Yearly mortality files are downloaded from from CDC Wonder. 
+- Yearly mortality files are downloaded from CDC Wonder. 
