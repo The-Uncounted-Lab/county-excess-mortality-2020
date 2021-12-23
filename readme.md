@@ -42,7 +42,7 @@ to mortality.
 
 
 #### Tables and Figures
-229.975
+
 [code/master_fig.R](https://github.com/Mortality-Surv-and-Reporting-Proj/county-level-estimates-of-excess-mortality/blob/master/code/master_fig.R) runs all the following scripts to reproduce tables and figures in the paper. All output files are in `output/`.
 
 - [code/prelim_plot.R](https://github.com/Mortality-Surv-and-Reporting-Proj/county-level-estimates-of-excess-mortality/blob/master/code/prelim_plot.R) loads packages and common functions to run the scripts.
