@@ -20,8 +20,8 @@ level using a quasi-poisson generalized linear model (QP-GLM) of the following f
 ![](https://raw.githubusercontent.com/Mortality-Surv-and-Reporting-Proj/county-level-estimates-of-excess-mortality/master/output/QP_GLM.png)
 
 - Y<sub>it</sub> represents the number of all-cause deaths divided by the total population of county i in year t. 
-- α<sub>i</sub> denotes a county-set-specific intercept term, which captured latent characteristics
-of each county-set that may be correlated with mortality. Importantly, this term picked up relevant
+- α<sub>i</sub> denotes a county-set-specific intercept term, which captures latent characteristics
+of each county-set that may be correlated with mortality. Importantly, this term picks up relevant
 information such as the distribution of age and health in each county-set.
 - Y<sub>t−1</sub> one lag of the
 dependent variable to capture potential serial correlation in mortality.
