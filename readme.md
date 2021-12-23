@@ -12,6 +12,23 @@ This repo includes data and code required to replicate the results in the paper 
 
 ![](https://raw.githubusercontent.com/Mortality-Surv-and-Reporting-Proj/county-level-estimates-of-excess-mortality/master/output/afig_ts_2.png)
 
+## Model
+In order to predict the expected mortality in 2020, we estimated a statistical model of mortality
+using historical mortality data from 2011-2019. Specifically, we modeled mortality at the county-set-year
+level using a quasi-poisson generalized linear model (QP-GLM) of the following form:
+
+![](https://raw.githubusercontent.com/Mortality-Surv-and-Reporting-Proj/county-level-estimates-of-excess-mortality/master/output/QP_GLM.png)
+
+- Y<sub>it</sub> represents the number of all-cause deaths divided by the total population of county i in year t. 
+- α<sub>i</sub> denotes a county-set-specific intercept term, which captured latent characteristics
+of each county-set that may be correlated with mortality. Importantly, this term picked up relevant
+information such as the distribution of age and health in each county-set.
+- Y<sub>t−1</sub> one lag of the
+dependent variable to capture potential serial correlation in mortality.
+- t represents time
+- β<sub>i</sub> allows the time trend to vary across county-sets. This accounts for the evolving
+distribution of age and other demographic characteristics across granular geographies that may be related
+to mortality.
 
 ## Code
 
