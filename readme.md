@@ -1,8 +1,6 @@
 # County-Level Estimates of Excess Mortality Associated with COVID-19 in the United States
 
-This repo includes data and code required to replicate the results in the paper "County-Level Estimates of Excess Mortality Associated with COVID-19 in the United States".
-
-[Link to "County-Level Estimates of Excess Mortality Associated with COVID-19 in the United States"](https://www.medrxiv.org/content/10.1101/2021.04.23.21255564v5.full.pdf)
+This repo includes data and code required to replicate the results in the paper "County-Level Estimates of Excess Mortality Associated with COVID-19 in the United States". [[Link to Pre-Print]](https://www.medrxiv.org/content/10.1101/2021.04.23.21255564v5.full.pdf)
 
 ## Map of Excess Mortality By Quartile
 
